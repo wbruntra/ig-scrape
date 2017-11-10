@@ -1,0 +1,16 @@
+{
+  "name": "ig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "instagram-screen-scrape": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrape":"instagram-scraper cristiano --media-metadata --media-types none --maximum 250"
+  },
+  "author": "",
+  "license": "ISC"
+}
