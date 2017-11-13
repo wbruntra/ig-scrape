@@ -2,7 +2,7 @@ import csv
 import json
 import datetime
 
-username = 'cristiano'
+username = 'jenniferlawrencepx'
 
 with open(username + '/' + username + '.json') as f:
     posts = json.loads(f.read())
@@ -13,10 +13,14 @@ fields = ['edge_media_preview_like', 'edge_media_to_comment', 'text','time']
 
 
 def getData(post):
+    try:
+        caption = post["edge_media_to_caption"]["edges"][0]["node"]["text"]
+    except:
+        caption = "[no caption]"
     result = [
         post["edge_media_preview_like"]["count"],
         post["edge_media_to_comment"]["count"],
-        post["edge_media_to_caption"]["edges"][0]["node"]["text"],
+        caption,
         datetime.datetime.fromtimestamp(
         int(post["taken_at_timestamp"])
         ).strftime('%Y-%m-%d %H:%M:%S')
