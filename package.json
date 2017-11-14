@@ -9,8 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scrape":"instagram-scraper jenniferlawrencepx --media-metadata --media-types none --maximum 250",
-    "to:csv": "python tocsv.py"
+    "scrape":"instagram-scraper heidiklum --media-metadata --media-types none --maximum 250",
+    "to-csv": "python3 tocsv.py heidiklum"
   },
   "author": "",
   "license": "ISC"

@@ -1,8 +1,9 @@
 import csv
 import json
 import datetime
+import sys
 
-username = 'jenniferlawrencepx'
+username = sys.argv[1]
 
 with open(username + '/' + username + '.json') as f:
     posts = json.loads(f.read())
